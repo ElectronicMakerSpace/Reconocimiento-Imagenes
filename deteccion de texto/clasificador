@@ -1,0 +1,131 @@
+###importamos las  librerias 
+import cv2
+import numpy as np
+import os
+import matplotlib.pyplot as plt
+####cargamos las fotos  de las carpetas especificas###
+lcd_folder_path="C:/Users/kv460/Documents/lcd/lcd"
+lcd=[]
+img_size=150
+for img in os.listdir(lcd_folder_path):
+    img = cv2.imread(os.path.join(lcd_folder_path,img))
+    #img_gray= cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+    img_resize= cv2.resize(img,(img_size,img_size))
+    lcd.append(img_resize)
+
+#vizualizamos tamaño de la imagen
+lcd = np.array(lcd)
+print(lcd.shape)
+
+####cargamos las fotos  de las carpetas especificas###
+import cv2
+import numpy as np
+import os
+import matplotlib.pyplot as plt
+ 
+perro_folder_path="C:/Users/kv460/Documents/lcd/perro"
+perro=[]
+img_size=150
+for img in os.listdir(perro_folder_path):
+    img = cv2.imread(os.path.join(perro_folder_path,img))
+    #img_gray= cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+    img_resize= cv2.resize(img,(img_size,img_size))
+    perro.append(img_resize)
+    
+perro = np.array(perro)
+print(perro.shape)
+#checamos el tamaño de las imagenes
+print(lcd[4].shape)
+plt.figure()
+plt.imshow(np.squeeze(lcd[2]))
+plt.colorbar()
+plt.grid(False)
+plt.show()
+#############checamos el tamaño de las imagenes############
+print(perro[2].shape)
+plt.figure()
+plt.imshow(np.squeeze(perro[2]))
+plt.colorbar()
+plt.grid(False)
+plt.show()
+##concatenamos imagenes#########
+images=np.concatenate([lcd,perro])
+#convertir a un arreglo 
+Images=np.array(images)
+print(len(images)) #imprimecuantas imagenes hay en total
+##########################etiquetamos#################
+etiquetas_lcd=np.repeat(0,41)#lcd se reconoce con elnumero 0
+print(len(etiquetas_lcd))
+print(etiquetas_lcd)
+#################etiquetamos##############
+etiquetas_perro=np.repeat(1,81)#perro se reconoce con elnumero 1
+print(len(etiquetas_perro))
+print(etiquetas_perro)
+#nombre de las clases empezando con cero
+class_names=['lcd','perro']
+#concatenamos clases
+labels=np.concatenate([etiquetas_lcd,etiquetas_perro])
+print(len(labels))
+print(labels)
+#arreglo
+Labels=np.array(labels)
+print(Labels.shape)
+plt.figure(figsize=(10,10))
+for i in range(100):#GRAFICA 20 FIGURAS
+    plt.subplot(10,10,i+1)
+    plt.xticks([])
+    plt.yticks([])
+    plt.grid(False)
+    plt.imshow(Images[i])
+    #, cmap=plt.cm.binary
+    plt.xlabel(class_names[Labels[i]])
+plt.show()
+
+# TensorFlow and tf.keras
+import tensorflow as tf
+from tensorflow import keras
+from tensorflow.keras import datasets, layers, models
+import tensorflow.keras.optimizers as Optimizer
+
+# Helper libraries
+import numpy as np
+import matplotlib.pyplot as plt
+print(tf.__version__)
+
+#REALIZAMOS ELENTRENAMIENTO
+model = keras.Sequential([
+    keras.layers.Flatten(input_shape=(150, 150,3)),
+    keras.layers.Dense(128, activation='relu'),
+    
+    keras.layers.Dense(2, activation='softmax'),
+    
+])
+model.compile(optimizer='adam',
+              loss='sparse_categorical_crossentropy',
+              metrics=['accuracy'])
+model.fit(Images, Labels, epochs=3)
+trained=model.fit(Images, Labels, epochs=30)
+
+
+#imagen de interner se debe cargar 
+img=cv2.imread('h.jpeg')
+img_cvt=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
+plt.show
+
+img2=img_cvt
+img2=cv2.resize(img2,(img_size,img_size))
+print(img2.shape)
+img2=(np.expand_dims(img2,0))
+print(img2.shape)
+
+predictions_single=model.predict(img2)
+print(predictions_single)
+print(np.sum(predictions_single))
+print(np.argmax(predictions_single))
+print(class_names[np.argmax(predictions_single)])
+
+
+
+
+
+		
