@@ -57,7 +57,7 @@ Ahora para poder convertir este programa en un ejecutable  necesitamos instalar 
 pip install pyinstaller
 ```
 #Importante
--el siguiente  codigo se debe ejecutar en simbolo del sistema  tanto para  windows como para linux   
+- El siguiente  codigo se debe ejecutar en simbolo del sistema  tanto para  windows como para linux   
 ```sh
 pyinstaller --windowed --onefile COLORESpy
 ```
