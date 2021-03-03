@@ -1,4 +1,4 @@
 INSTALAR
-pip install PyQt5
-pip install serial
+- pip install PyQt5
+- pip install serial
 
