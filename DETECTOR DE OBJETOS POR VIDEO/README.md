@@ -1,8 +1,8 @@
 # Detección de objetos en video usando el modelo Retinanet
 
 - COMO PRIMER PASO
-# DESCARGAR  labelImg
-- CLONANDO EL SIGUIENTE REPOSITORIO
+# DESCARGAMOS  labelImg
+- PARA ESTO CLONAMOS  EL SIGUIENTE REPOSITORIO
 git clone https://github.com/tzutalin/labelImg.git
 - cd labelImg
 # DESCARGAR IMAGENES 
@@ -96,6 +96,7 @@ $ with open('classes.csv', 'w') as f:
  Con este programa se ejecutaran 3 archivos en formato CSV clases contendra los nombre de los objetos a detectar, annotations.csv contendra los archicvos que se utilizaran para  entremaniento y annotations_test.csv contendra los archivos que se utilizaran para pruebas.
  
  [![N|Solid](https://github.com/KARENalejand/DETECTOR-DE-OBJETOS/blob/main/cvs.jpeg)]
+
 
 
 
