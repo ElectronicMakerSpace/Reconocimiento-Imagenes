@@ -97,6 +97,13 @@ $ with open('classes.csv', 'w') as f:
  
  [![N|Solid](https://github.com/KARENalejand/DETECTOR-DE-OBJETOS/blob/main/cvs.jpeg)]
 
+# ENTRENAMIENTO
+- Para este proceso usaremos google colab  para que sea mas rapido el proceso
+- Abrimos un nuevo archivo y  configuramos un  entorno de ejecucion GPU.
+
+[![N|Solid](https://github.com/KARENalejand/DETECTOR-DE-OBJETOS/blob/main/gpu.jpeg)]
+
+
 
 
 
