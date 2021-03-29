@@ -1,1 +1,4 @@
-
+- INSTTALACION DE labelImg
+##CLONAMOS EL SIGUIENTE REPOSITORIO
+git clone https://github.com/tzutalin/labelImg.git
+cd labelImg
