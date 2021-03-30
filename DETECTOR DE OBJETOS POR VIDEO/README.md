@@ -261,6 +261,8 @@ $  boxes, scores, labels = predict(image)
  - Carpeta images(contentra  imagenes con sus debidas etiquetas)
 
 
+ [![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/carpeta.jpeg)]
+
 
 
 
