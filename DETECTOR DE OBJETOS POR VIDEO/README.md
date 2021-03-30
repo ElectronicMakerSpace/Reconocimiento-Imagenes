@@ -13,7 +13,7 @@ git clone https://github.com/tzutalin/labelImg.git
  [![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/labels.jpeg)]
  
  Este programa creara un archivo XML donde se encuentran las coordenadas del objeto a detectar y el nombre de la clase
-  [![N|Solid](https://github.com/KARENalejand/DETECTOR-DE-OBJETOS/blob/main/label2.jpeg)]
+  [![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/label2.jpeg)]
  - Terminando de  etiquetar todas las imagenes  convertiremos los archivos  XML a  archivos CSV  apoyandonos de jupyter notebook.
  ```sh
  # importamoslibrerias
