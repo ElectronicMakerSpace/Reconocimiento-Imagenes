@@ -177,6 +177,8 @@ $    sys.exit(app.exec_())
 - Cargamos  nuestro código principal donde se hace la deteción de objetos
  [![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/CARGAR.jpeg)]
  
+ - Selecionamos  onefile y Window Based (hide the console), para crear un archivo .exe sin consola 
+  [![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/SIN%20CONSOLA.jpeg)] 
 
     
         
