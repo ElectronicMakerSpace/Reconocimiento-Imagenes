@@ -250,6 +250,10 @@ $  boxes, scores, labels = predict(image)
 
  [![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/prueba.jpeg)]
  
+ 
+ # CREAR DETECTOR DE COMPONENTES ELECTRONICÓS
+ 
+ 
    
    
 
