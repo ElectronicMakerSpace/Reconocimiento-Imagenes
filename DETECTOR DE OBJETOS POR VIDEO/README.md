@@ -124,8 +124,8 @@ drive.mount('/content/drive')
 [![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/drive.jpeg)]
 
 - Al ingresar a google drive aparecera el siguente codigo el cual debes ingresar en el recuadro que aparecio  en google colab.
-[![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/codigo%20drive.jpeg)]
 
+[![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/codigo%20drive.jpeg)]
  
 
 
