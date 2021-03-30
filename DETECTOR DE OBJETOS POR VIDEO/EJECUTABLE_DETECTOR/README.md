@@ -99,12 +99,14 @@ $    sys.exit(app.exec_())
  
  [![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/EJECUTAR.jpeg)] 
    
-   - Al termina de compila se creara una carpeta donde  se encontrara el archivo .exe
+  - Al termina de compila se creara una carpeta donde  se encontrara el archivo .exe
     [![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/CARPETA_EXE.jpeg)] 
    
    - El archivo se vera de la siguiente manera:
     
-    [![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/EXE_P.jpeg)] 
+[![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/EXE_P.jpeg)]
+
+ 
    
     
    
