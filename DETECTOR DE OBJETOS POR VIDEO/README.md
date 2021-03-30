@@ -245,6 +245,9 @@ $  boxes, scores, labels = predict(image)
  $ plt.show()
  ```
  - SI TODO SALE BIEN SE  VERA DE LA SIGUIENTE MANERA:
+
+
+
  [![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/prueba.jpeg)]
  
    
