@@ -335,9 +335,11 @@ $ def predict(image):
    $  boxes /= scale
 
     $ return boxes, scores, label
-    ```
-    # SE REALIZA LA CAPTURA DE VIDEO
-    ```sh
+    
+```
+    
+   #  SE REALIZA LA CAPTURA DE VIDEO
+ ```sh
     
 $ camera = cv2.VideoCapture(0) # SE INICIA LA CAMARA
 $ camera_height = 500 #tamaño
@@ -380,6 +382,45 @@ cv2.destroyAllWindows()$ borra info de la camara
 ```
 # RESULTADOS
  [![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/RESULTADO%201.jpeg)]
+ 
+[![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/RESULTADO2.jpeg)]
+
+# DETECTAR IMAGENES
+- si se decea detectar imagenes,solo se omite la parte de captura de video y se  coloca el siguiente  código.
+```sh
+# IMAGENES
+img=cv2.imread('809.png')#SE CARGA LA IMAGEN 
+cv2.imshow('imagen',img) # SE VIZUALIZA
+boxes,scores,labels=predict(img)
+draw=img.copy()
+
+for box, score, label in zip(boxes[0], scores[0], labels[0]):
+        if score > 0.8:
+            print(box)
+            b = box.astype(int)
+            color = label_color(label)
+            draw_box(draw, b, color=color)
+            caption = "{} {:.3f}".format(labels_to_names[label], score)
+            draw_caption(draw, b, caption)
+            cv2.imshow("imagen",draw)# SE DIBUJA EL RECTANGULO EN CASO  DE DETECTAR EL OBJETO DESEADO
+           
+            print('se ha detectado')
+            detec=label
+            if label==0:
+                print('rasberry pi4')
+            if label==1:
+                print('protoboar')
+                cv2.waitKey(0) # SIRVE PARA CERRAR A IMAGEN
+            break 
+        else: # SI NO  DETECTATA NADA  EN LA IMAGEN IMPRIME " NO  SE DETECTO  INTENTE DE NUEVO"
+            cv2.imshow('imagen',img)# VIZUALIZA LA IMAGEN
+            print('no se detecto intente de nuevo')
+            cv2.waitKey(0)# CIERRA LA IMAGEN
+            break
+   ```
+   # RESULTADOS
+    
+[![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/RESULTADO3.jpeg)]
  
 
 
