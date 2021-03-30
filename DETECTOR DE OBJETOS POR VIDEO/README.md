@@ -120,6 +120,9 @@ cd keras-retinanet/
 from google.colab import drive
 drive.mount('/content/drive')
 ```
+- Al ejecutar from google.colab import drive..... se   mostrara  el siguiente link  dar clic  en el para  ingresar  a tu google drive 
+[![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/drive.jpeg)]
+
  
 
 
