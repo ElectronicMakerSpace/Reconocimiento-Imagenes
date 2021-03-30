@@ -95,13 +95,13 @@ $ with open('classes.csv', 'w') as f:
  ```
  Con este programa se ejecutaran 3 archivos en formato CSV clases contendra los nombre de los objetos a detectar, annotations.csv contendra los archicvos que se utilizaran para  entremaniento y annotations_test.csv contendra los archivos que se utilizaran para pruebas.
  
- [![N|Solid](https://github.com/KARENalejand/DETECTOR-DE-OBJETOS/blob/main/cvs.jpeg)]
+ [![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/cvs.jpeg)]
 
 # ENTRENAMIENTO
 - Para este proceso usaremos google colab  para que sea mas rapido el proceso
 - Abrimos un nuevo archivo y  configuramos un  entorno de ejecucion GPU.
 
-[![N|Solid](https://github.com/KARENalejand/DETECTOR-DE-OBJETOS/blob/main/gpu.jpeg)]
+[![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/gpu.jpeg)]
 
 
 
