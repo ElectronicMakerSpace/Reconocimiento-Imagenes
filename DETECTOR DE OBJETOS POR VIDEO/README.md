@@ -187,9 +187,9 @@ urllib.request.urlretrieve(URL_MODEL, './snapshots/model.h5')
 - A si se veria el entrenamiento de la ultima epoca
 [![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/E.jpeg)]
  
- - Todas estas epocas  se guardaran en la carpeta snapshots y se debe de descargar le ultimo o el penultimo entrenamiento ya que son los que mas an aprendido
+ - Todas estas epocas  se guardaran en la carpeta snapshots y se deberá de descargar el ultimo o el penultimo entrenamiento ya que son los que mas han aprendido
  # REALIZAR  PRUEBA DE FUNCIONAMIENTO
- - con el siguiente cogigo realizamos una prueba para ver que el entrenamiento funciona d emanera adecuada.
+ - con el siguiente código realizamos una prueba para ver que el entrenamiento funciona de emanera adecuada.
  
 ```sh 
 $ model_path = os.path.join('snapshots', sorted(os.listdir('snapshots'), reverse=True)[0])
