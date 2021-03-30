@@ -126,6 +126,20 @@ drive.mount('/content/drive')
 - Al ingresar a google drive aparecera el siguente codigo el cual debes ingresar en el recuadro que aparecio  en google colab.
 
 [![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/codigo%20drive.jpeg)]
+
+# IMPORTANTE
+DEBES CARGAR LOS ARCHIVOS CSV Y LAS IMAGENES ETIQUETADAS EN GOOGLE DRIVE PARA PODER REALIZAR ESTE PROCESO
+# CONTINUAMOS:
+- Al montar nuestro drive escrivimos las siguientes lineas de codigo para  copiar los archivos de entrenamiento que necesitamos
+
+```sh 
+$ # Copiamos los archivos que necesitamos para el entrenamiento
+$ # Asegúrate de reemplazar la dirección con tu propio path (/content/drive/My Drive/Desarrollos/Hand Detection/) 
+$ !cp -r "/content/drive/My Drive/prueba5/images" "/content/keras-retinanet"
+$ !cp -r "/content/drive/My Drive/prueba5/annotations.csv" "/content/keras-retinanet"
+$ !cp -r "/content/drive/My Drive/prueba5/annotations_test.csv" "/content/keras-retinanet"
+$ !cp -r "/content/drive/My Drive/prueba5/classes.csv" "/content/keras-retinanet" 
+```
  
 
 
