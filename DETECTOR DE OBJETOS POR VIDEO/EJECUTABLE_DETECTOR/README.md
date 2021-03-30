@@ -106,6 +106,25 @@ $    sys.exit(app.exec_())
     
 [![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/EXE_P.jpeg)]
 
+- Al dar doble click  sobre el ejecutable se abrira la aplicación y se vera de la siguiente manera:
+
+[![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/APP.jpeg)]
+
+# RESULTADOS
+[![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/RESULTADO5.jpeg)]
+
+[![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/RESULTADO%206.jpeg)]
+
+[![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/RESULTADO7.jpeg)]
+
+- Checar el funcionamiento del app en  el siguiente link:
+
+
+
+
+
+
+
  
    
     
