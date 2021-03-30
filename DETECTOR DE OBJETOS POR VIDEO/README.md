@@ -263,7 +263,23 @@ $  boxes, scores, labels = predict(image)
 
  [![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/carpeta.jpeg)]
 
+# CREAR ENTORNO VIRTUAL EN ANACONDA 
+```sh 
+ $ conda create -n entorno anaconda python=3.7.7
+ $ conda activate entorno
+ $ conda install ipykernel
+$ conda install tensorflow-gpu==2.1.0 cudatoolkit=10.1
+$ pip install tensorflow==2.1.0
+$ pip install jupyter
+$ pip install keras==2.3.1
+$ pip install numpy scipy Pillow cython matplotlib scikit-image opencv-python h5py imgaug IPython[all]
+```
+# ABRIMOS JUPYTER NOTEBOOK
+-Aqui se llevara acabo la deteción de objetos en tiempo real atravez de video streaming
 
+
+
+ 
 
 
 
