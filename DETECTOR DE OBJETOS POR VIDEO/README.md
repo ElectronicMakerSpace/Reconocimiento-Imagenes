@@ -6,16 +6,16 @@
 git clone https://github.com/tzutalin/labelImg.git
 - cd labelImg
 # DESCARGAR IMAGENES 
-- COMO SEGUNDO JUNTAMOS IMAGENES EN FORMATO PNG DE LOS OBJETOS ESPECIFICOS QUE QUEREMOS DETECTAR EN ESTE CASO SE  DESCARGARON 700 FOTOS DE RASBPERRY PI 4 Y 500 IMAGENES DE PROTOBOART.
-- POSTADA: Para realizar un mejor entrenamiento se recomienda  tener 1500 imagenes como minimo  de cada clase a detectar.
+- COMO SEGUNDO JUNTAMOS IMAGENES EN FORMATO .png DE LOS OBJETOS ESPECIFICOS QUE QUEREMOS DETECTAR EN ESTE CASO SE  DESCARGARON 700 FOTOS DE RASBPERRY PI 4 Y 500 IMAGENES DE PROTOBOARD.
+- POSDATA: Para realizar un mejor entrenamiento se recomienda  tener 1500 imagenes como minimo  de cada clase a detectar.
 - Despues de tener nuestras imagenes procedemos a etiquetarlas con labelImg
  
  [![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/labels.jpeg)]
  
- Este programa creara un archivo XML donde se encuentran las coordenadas del objeto a detectar y el nombre de la clase
+ Este programa creará un archivo .XML donde se encuentran las coordenadas del objeto a detectar y el nombre de la clase
   [![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/label2.jpeg)]
   # Archivos XML a archivos CSV
- - Terminando de  etiquetar todas las imagenes  convertiremos los archivos  XML a  archivos CSV  apoyandonos de jupyter notebook.
+ - Terminando de  etiquetar todas las imagenes  convertiremos los archivos  .XML a  archivos .CSV  apoyandonos de jupyter notebook.
  ```sh
  # importamoslibrerias
 $ import os
@@ -94,13 +94,13 @@ $ with open('classes.csv', 'w') as f:
     $ for i, line in enumerate(sorted(classes)):
         $ f.write('{},{}\n'.format(line,i))
  ```
- Con este programa se ejecutaran 3 archivos en formato CSV clases contendra los nombre de los objetos a detectar, annotations.csv contendra los archicvos que se utilizaran para  entremaniento y annotations_test.csv contendra los archivos que se utilizaran para pruebas.
+ Con este programa se ejecutaran 3 archivos en formato .CSV, clases contendra los nombre de los objetos a detectar, annotations.csv contendra los archicvos que se utilizaran para  entremaniento y annotations_test.csv contendra los archivos que se utilizaran para pruebas.
  
  [![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/cvs.jpeg)]
 
 # ENTRENAMIENTO
-- Para este proceso usaremos google colab  para que sea mas rapido el proceso
-- Abrimos un nuevo archivo y  configuramos un  entorno de ejecucion GPU.
+- Para este proceso usaremos google colab  para que sea más rápido el proceso
+- Abrimos un nuevo archivo y  configuramos un  entorno de ejecución GPU.
 
 [![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/gpu.jpeg)]
 
@@ -121,10 +121,11 @@ cd keras-retinanet/
 from google.colab import drive
 drive.mount('/content/drive')
 ```
-- Al ejecutar from google.colab import drive..... se   mostrara  el siguiente link  dar clic  en el para  ingresar  a tu google drive 
+- Al ejecutar "from google.colab import drive....." se   mostrará  el siguiente link:
+- Dar clic  en el para  ingresar  a tu google drive 
 [![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/drive.jpeg)]
 
-- Al ingresar a google drive aparecera el siguente codigo el cual debes ingresar en el recuadro que aparecio  en google colab.
+- Al ingresar a google drive, aparecerá el siguente código el cual debes ingresar en el recuadro que apareció  en google colab.
 
 [![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/codigo%20drive.jpeg)]
 
