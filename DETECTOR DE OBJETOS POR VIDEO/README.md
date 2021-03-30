@@ -275,7 +275,113 @@ $ pip install keras==2.3.1
 $ pip install numpy scipy Pillow cython matplotlib scikit-image opencv-python h5py imgaug IPython[all]
 ```
 # ABRIMOS JUPYTER NOTEBOOK
--Aqui se llevara acabo la deteción de objetos en tiempo real atravez de video streaming
+- Aqui se llevara acabo la deteción de objetos en tiempo real atravez de video streaming
+- Creamos  un documento nuevo y empezamos con el códogo
+```sh 
+# Empezamos  clonando algunas librerias ya  que es nuevo el entorno 
+$ !git clone https://github.com/DavidReveloLuna/keras-retinanet.git
+$ cd keras-retinanet/
+$ !pip install .
+$ !python setup.py build_ext --inplace
+#luego importamos las  LIBRERIAS
+$ import numpy as np
+$ import pandas as pd
+$ import seaborn as sns
+$  pylab import rcParams
+$ import matplotlib.pyplot as plt
+$ from matplotlib import rc
+$ from pandas.plotting import register_matplotlib_converters
+$ from sklearn.model_selection import train_test_split
+$ import urllib
+$ import os
+$ import csv
+$ import cv2
+$ import time
+$ from PIL import Image
+
+$ from keras_retinanet import models
+$ from keras_retinanet.utils.image import read_image_bgr, preprocess_image, resize_image
+$ from keras_retinanet.utils.visualization import draw_box, draw_caption
+$ from keras_retinanet.utils.colors import label_color
+$ from keras_retinanet import models
+$ from keras_retinanet.utils.image import read_image_bgr, preprocess_image, resize_image
+$ from keras_retinanet.utils.visualization import draw_box, draw_caption
+$ from keras_retinanet.utils.colors import label_color
+$ #CARGAMOS EL MODELO Y LAS EIQUETAS QUE ESTAN EN LOS ARCHIVOS
+$ from keras.models import load_model
+$ from keras_retinanet import models
+
+$ model_path = os.path.join('snapshots', sorted(os.listdir('snapshots/'), reverse=True)[0])
+$ print(model_path)
+
+$ model = models.load_model(model_path, backbone_name='resnet50')
+$ model = models.convert_model(model)
+
+$ labels_to_names = pd.read_csv('classes.csv', header=None).T.loc[0].to_dict()
+
+# Función que realizaz la predicción
+# DEVUELVE LOS OBJETOS DE INTERES
+
+$ import skimage.io as io
+
+$ def predict(image):
+    $ image = preprocess_image(image.copy())# PROCESA LA IMAGEN
+    $ image, scale = resize_image(image)#
+
+    $ boxes, scores, labels = model.predict_on_batch( # DEVUELVE REGIONES D EINTERE LOS PUNTAJE Y LAS ETIQUETAS
+     $ np.expand_dims(image, axis=0)
+     )
+
+   $  boxes /= scale
+
+    $ return boxes, scores, label
+    ```
+    # SE REALIZA LA CAPTURA DE VIDEO
+    ```sh
+    
+$ camera = cv2.VideoCapture(0) # SE INICIA LA CAMARA
+$ camera_height = 500 #tamaño
+
+$ while(True):
+
+ $   _, frame = camera.read()
+    
+
+  $  frame = cv2.flip(frame, 1)
+
+ $   boxes, scores, labels = predict(frame) #
+
+  $  draw = frame.copy()
+
+
+ $  for box, score, label in zip(boxes[0], scores[0], labels[0]):
+ $       if score > 0.8: si es un 0.8% compatible se detecta el objeto
+ $           print(box) # se dibuja la caja
+ $           b = box.astype(int)
+ $           color = label_color(label)
+ $           draw_box(draw, b, color=color)
+ $          caption = "{} {:.3f}".format(labels_to_names[label], score)
+ $          draw_caption(draw, b, caption)
+            
+
+    # show the frame
+  $  cv2.imshow("Test out", draw)# se visualiza el video
+
+
+  $  key = cv2.waitKey(1)
+
+  
+   $ if key & 0xFF == ord("q"): #presiona q para detener el video
+    $    break
+
+camera.release()
+cv2.destroyAllWindows()$ borra info de la camara
+
+```
+# RESULTADOS
+ [![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/RESULTADO%201.jpeg)]
+ 
+
 
 
 
