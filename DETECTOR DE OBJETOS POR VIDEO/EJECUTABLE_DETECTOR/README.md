@@ -180,7 +180,11 @@ $    sys.exit(app.exec_())
  - Selecionamos  onefile y Window Based (hide the console), para crear un archivo .exe sin consola 
   [![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/SIN%20CONSOLA.jpeg)] 
 
-    
+- Cargamos el icono que deseamos que tenga nuestra interfaz
+- El archivo debe ser .ico  para convertor cualquier imagen en .ico  se utilizo la siguiente pagina: https://imagen.online-convert.com/es/convertir-a-ico
+
+   [![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/ICONO.jpeg)]  
+   
         
 
        
