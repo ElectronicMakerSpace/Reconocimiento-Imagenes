@@ -104,7 +104,7 @@ $    sys.exit(app.exec_())
    
    - El archivo se vera de la siguiente manera:
     
-    [![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/EXE_APP.jpeg)] 
+    [![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/EXE_P.jpeg)] 
    
     
    
