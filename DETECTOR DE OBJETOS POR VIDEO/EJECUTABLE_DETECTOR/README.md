@@ -121,27 +121,14 @@ $    sys.exit(app.exec_())
 
 
 
+# RECOMENDACIONES PARA RESOLVER POSIBLES PROBLEMAS
 
+-  Se recomienda que primero se hagan pruebas con un archivo con consola para ver si se localiza un posoble error 
+- para evitar probemar con  numpy.random.commo te recomiendo que antes de hacer tu ejecutable coloques en tu cdm lo siguiente:
 
+- pyinstaller install -n APP_NAME -c --clean SCRIPT_NAME.py
 
-
- 
-   
-    
-   
-
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- - Tambien se recomienda uqe primero se hagan pruebas con un archivo con consola para ver si sale algunos   errores 
- -  El error  que te puedes encontra seria el siguiente 
+- puedes checar la siguiente pagina si   el problema de numpy.random.commo continúa :https://stackoverflow.com/questions/57264427/in-pyinstaller-why-wont-numpy-random-common-load-as-a-module
  
  
  
