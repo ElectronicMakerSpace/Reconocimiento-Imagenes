@@ -253,12 +253,12 @@ $  boxes, scores, labels = predict(image)
  
  
  # CREAR DETECTOR DE COMPONENTES ELECTRONICÓS
- 
- 
-   
-   
-
-
+ - Creamos  una carpeta donde deben estar los siguientes archivos
+ - annotations.csv
+ - annotations_test.csv
+ - clases.csv
+ - Una carpeta llamada snapshots(contendra el modelo entrenado que descargamos)
+ - Carpeta images(contentra  imagenes con sus debidas etiquetas)
 
 
 
