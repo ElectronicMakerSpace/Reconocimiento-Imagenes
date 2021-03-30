@@ -1,21 +1,22 @@
-# Detección DE OBJETOS EN VIDEO USANDO EL MODELO Retinanet
+# DETECCIÓN DE OBJETOS EN VIDEO, USANDO EL MODELO Retinanet
 
-- COMO PRIMER PASO
+
 # DESCARGAMOS  labelImg
 - PARA ESTO CLONAMOS  EL SIGUIENTE REPOSITORIO
 git clone https://github.com/tzutalin/labelImg.git
 - cd labelImg
 # DESCARGAR IMAGENES 
-- COMO SEGUNDO JUNTAMOS IMAGENES EN FORMATO .png DE LOS OBJETOS ESPECIFICOS QUE QUEREMOS DETECTAR EN ESTE CASO SE  DESCARGARON 700 FOTOS DE RASBPERRY PI 4 Y 500 IMAGENES DE PROTOBOARD.
+- COMO SEGUNDO PASO JUNTAMOS IMAGENES EN FORMATO.PNG DE LOS OBJETOS ESPECIFICOS QUE QUEREMOS DETECTAR EN ESTE CASO SE  DESCARGARON 700 FOTOS DE RASBPERRY PI 4 Y 500 IMAGENES DE PROTOBOARD.
 - POSDATA: Para realizar un mejor entrenamiento se recomienda  tener 1500 imagenes como minimo  de cada clase a detectar.
-- Despues de tener nuestras imagenes procedemos a etiquetarlas con labelImg
+- Después de tener nuestras imagenes, procedemos a etiquetarlas con labelImg
  
  [![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/labels.jpeg)]
  
  Este programa creará un archivo .XML donde se encuentran las coordenadas del objeto a detectar y el nombre de la clase
   [![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/label2.jpeg)]
   # Archivos XML a archivos CSV
- - Terminando de  etiquetar todas las imagenes  convertiremos los archivos  .XML a  archivos .CSV  apoyandonos de jupyter notebook.
+ - Terminando de  etiquetar todas las imagenes, convertiremos los archivos  .XML a  archivos .CSV  apoyandonos de jupyter notebook.
+ # CÓDIGO
  ```sh
  # importamoslibrerias
 $ import os
@@ -94,7 +95,7 @@ $ with open('classes.csv', 'w') as f:
     $ for i, line in enumerate(sorted(classes)):
         $ f.write('{},{}\n'.format(line,i))
  ```
- Con este programa se ejecutaran 3 archivos en formato .CSV, clases contendra los nombre de los objetos a detectar, annotations.csv contendra los archicvos que se utilizaran para  entremaniento y annotations_test.csv contendra los archivos que se utilizaran para pruebas.
+ Con este programa se ejecutaran 3 archivos en formato .CSV , el archivo clases contendra los nombre de los objetos a detectar, annotations.csv contendra los archicvos que se utilizaran para  entremaniento y annotations_test.csv contendra los archivos que se utilizaran para pruebas.
  
  [![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/cvs.jpeg)]
 
@@ -104,6 +105,7 @@ $ with open('classes.csv', 'w') as f:
 
 [![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/gpu.jpeg)]
 
+# CÓDIGO DE ENTRENAMIENTO
  
  ```sh 
 #Como primer paso clonamos el repositorio de keras-retinanet
@@ -122,10 +124,10 @@ from google.colab import drive
 drive.mount('/content/drive')
 ```
 - Al ejecutar "from google.colab import drive....." se   mostrará  el siguiente link:
-- Dar clic  en el para  ingresar  a tu google drive 
+- Dar clicK  en el  link para  ingresar  a google drive 
 [![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/drive.jpeg)]
 
-- Al ingresar a google drive, aparecerá el siguente código el cual debes ingresar en el recuadro que apareció  en google colab.
+- Al ingresar a google drive, aparecerá el siguente código el cual deberas ingresar en el recuadro que apareció  en google colab.
 
 [![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/codigo%20drive.jpeg)]
 
@@ -166,14 +168,14 @@ $ from keras_retinanet.utils.image import read_image_bgr, preprocess_image, resi
 $ from keras_retinanet.utils.visualization import draw_box, draw_caption
 $ from keras_retinanet.utils.colors import label_color
 ```
-# DESCARGAMOS MODELO PREENTRENADO resnet50_coco
+# DESCARGAMOS  EL MODELO PREENTRENADO resnet50_coco
 ```sh 
 URL_MODEL = 'https://github.com/fizyr/keras-retinanet/releases/download/0.5.1/resnet50_coco_best_v2.1.0.h5'
 urllib.request.urlretrieve(URL_MODEL, './snapshots/model.h5')
 # este modelo se grabara en la carpeta snapshots
 ```
 
-# Es importante correr la siguiente linea de codigo, si no no se llevara acabo  el entrenamiento.
+# Es importante correr la siguiente linea de codigo, si no, no se llevara acabo  el entrenamiento.
 ```sh 
 !chmod 777 keras_retinanet/bin/*
 ```
@@ -181,15 +183,15 @@ urllib.request.urlretrieve(URL_MODEL, './snapshots/model.h5')
 
 ```sh 
 !keras_retinanet/bin/train.py --freeze-backbone --random-transform --weights snapshots/model.h5 --batch-size 8 --steps 200 --epochs 50 csv annotations.csv classes.csv
-#Aqui se realizara el entrenamiento , aqui especificamoe el numero de epocas , batch y eteps.
-#Cabe mencionar que este puede tardar horas  o dias dependiendo   del nuemero de batch-size,steps,epochs y el internet ,Tambien cabe mencionar que debes cuidar este  proceso para que no haya sobre entrenamiento.
+#Aqui se realizará el entrenamiento , aqui especificamos el numero de epocas , batch y eteps.
+#Cabe mencionar que este puede tardar horas  o dias dependiendo   del nuemero de batch-size,steps,epochs y el internet ,También cabe mencionar que debes cuidar este  proceso para que no haya sobre entrenamiento.
 ```
-- A si se veria el entrenamiento de la ultima epoca
+- A si se verá el entrenamiento de la ultima epoca
 [![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/E.jpeg)]
  
- - Todas estas epocas  se guardaran en la carpeta snapshots y se deberá de descargar el ultimo o el penultimo entrenamiento ya que son los que mas han aprendido
+ - Todas estas epocas  se guardarán en la carpeta snapshots y se deberá de descargar el ultimo o el penultimo entrenamiento, ya que son los que mas han aprendido
  # REALIZAR  PRUEBA DE FUNCIONAMIENTO
- - con el siguiente código realizamos una prueba para ver que el entrenamiento funciona de emanera adecuada.
+ - Con el siguiente código realizamos una prueba, para ver que el entrenamiento funciona de manera adecuada.
  
 ```sh 
 $ model_path = os.path.join('snapshots', sorted(os.listdir('snapshots'), reverse=True)[0])
@@ -245,7 +247,7 @@ $  boxes, scores, labels = predict(image)
  $ plt.imshow(draw)
  $ plt.show()
  ```
- - SI TODO SALE BIEN SE  VERA DE LA SIGUIENTE MANERA:
+ - SI TODO SALE BIEN, SE VERÁ DE LA SIGUIENTE MANERA:
 
 
 
@@ -257,8 +259,8 @@ $  boxes, scores, labels = predict(image)
  - annotations.csv
  - annotations_test.csv
  - clases.csv
- - Una carpeta llamada snapshots(contendra el modelo entrenado que descargamos)
- - Carpeta images(contentra  imagenes con sus debidas etiquetas)
+ - Una carpeta llamada snapshots(contendrá el modelo entrenado que descargamos)
+ - Carpeta images(contendrá  imagenes con sus debidas etiquetas)
 
 
  [![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/carpeta.jpeg)]
@@ -275,8 +277,8 @@ $ pip install keras==2.3.1
 $ pip install numpy scipy Pillow cython matplotlib scikit-image opencv-python h5py imgaug IPython[all]
 ```
 # ABRIMOS JUPYTER NOTEBOOK
-- Aqui se llevara acabo la deteción de objetos en tiempo real atravez de video streaming
-- Creamos  un documento nuevo y empezamos con el códogo
+- Aquí se llevará acabo la deteción de objetos en tiempo real atravez de video streaming
+- Creamos  un documento nuevo y empezamos con el código.
 ```sh 
 # Empezamos  clonando algunas librerias ya  que es nuevo el entorno 
 $ !git clone https://github.com/DavidReveloLuna/keras-retinanet.git
@@ -328,7 +330,7 @@ $ def predict(image):
     $ image = preprocess_image(image.copy())# PROCESA LA IMAGEN
     $ image, scale = resize_image(image)#
 
-    $ boxes, scores, labels = model.predict_on_batch( # DEVUELVE REGIONES D EINTERE LOS PUNTAJE Y LAS ETIQUETAS
+    $ boxes, scores, labels = model.predict_on_batch( # DEVUELVE REGIONES DE INTERÉS, LOS PUNTAJE Y LAS ETIQUETAS
      $ np.expand_dims(image, axis=0)
      )
 
@@ -338,7 +340,7 @@ $ def predict(image):
     
 ```
     
-   #  SE REALIZA LA CAPTURA DE VIDEO
+   # SE REALIZA LA CAPTURA DE VIDEO
  ```sh
     
 $ camera = cv2.VideoCapture(0) # SE INICIA LA CAMARA
@@ -357,7 +359,7 @@ $ while(True):
 
 
  $  for box, score, label in zip(boxes[0], scores[0], labels[0]):
- $       if score > 0.8: si es un 0.8% compatible se detecta el objeto
+ $       if score > 0.8: #si es un 0.8% compatible se detecta el objeto
  $           print(box) # se dibuja la caja
  $           b = box.astype(int)
  $           color = label_color(label)
@@ -377,7 +379,7 @@ $ while(True):
     $    break
 
 camera.release()
-cv2.destroyAllWindows()$ borra info de la camara
+cv2.destroyAllWindows()$ borra información de la camara
 
 ```
 # RESULTADOS
@@ -386,7 +388,7 @@ cv2.destroyAllWindows()$ borra info de la camara
 [![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/RESULTADO2.jpeg)]
 
 # DETECTAR IMAGENES
-- si se decea detectar imagenes,solo se omite la parte de captura de video y se  coloca el siguiente  código.
+- Si se desea detectar imagenes,solo se omite la parte de captura de video y se  coloca el siguiente  código.
 ```sh
 # IMAGENES
 img=cv2.imread('809.png')#SE CARGA LA IMAGEN 
@@ -410,7 +412,7 @@ for box, score, label in zip(boxes[0], scores[0], labels[0]):
                 print('rasberry pi4')
             if label==1:
                 print('protoboar')
-                cv2.waitKey(0) # SIRVE PARA CERRAR A IMAGEN
+                cv2.waitKey(0) # SIRVE PARA CERRAR lA IMAGEN
             break 
         else: # SI NO  DETECTATA NADA  EN LA IMAGEN IMPRIME " NO  SE DETECTO  INTENTE DE NUEVO"
             cv2.imshow('imagen',img)# VIZUALIZA LA IMAGEN
