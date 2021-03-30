@@ -185,7 +185,70 @@ urllib.request.urlretrieve(URL_MODEL, './snapshots/model.h5')
 ```
 - A si se veria el entrenamiento de la ultima epoca
 [![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/E.jpeg)]
+ 
+ - Todas estas epocas  se guardaran en la carpeta snapshots y se debe de descargar le ultimo o el penultimo entrenamiento ya que son los que mas an aprendido
+ # REALIZAR  PRUEBA DE FUNCIONAMIENTO
+ - con el siguiente cogigo realizamos una prueba para ver que el entrenamiento funciona d emanera adecuada.
+ 
+```sh 
+$ model_path = os.path.join('snapshots', sorted(os.listdir('snapshots'), reverse=True)[0])
+$ print(model_path)
+$ model = models.load_model(model_path, backbone_name='resnet50')
 
+$ labels_to_names = pd.read_csv('classes.csv', header=None).T.loc[0].to_dict()
+$ test_df = pd.read_csv("annotations_test.csv")
+$ test_df.head()
+$ # Obtenemos la predicción del modelo: boxes, scores, labels
+$ import skimage.io as io
+
+$ def predict(image):
+  $ image = preprocess_image(image.copy())
+  $ image, scale = resize_image(image)
+
+  $ boxes, scores, labels = model.predict_on_batch(
+    $ np.expand_dims(image, axis=0)
+  $ )
+
+  $ boxes /= scale
+
+  $ return boxes, scores, labels
+  
+ $ # Mostramos los objetos encontrardos en la imagen
+ $# Se toman encuenta sólo los objetos que tienen asociada una probabilidad mayor a umbralScore
+$ umbralScore = 0.8
+
+$ def draw_detections(image, boxes, scores, labels):
+  $ for box, score, label in zip(boxes[0], scores[0], labels[0]):
+    $ if score < umbralScore:
+       $ break
+
+    $ color = label_color(label)
+
+    $ b = box.astype(int)
+    $ draw_box(image, b, color=color)
+
+   $ caption = "{} {:.3f}".format(labels_to_names[label], score)
+   $  draw_caption(image, b, caption)
+   
+  $ # Recorremos todo el dataFramee de test para revisar las predicciones
+$ for index, row in test_df.iterrows():
+ $ print(row[0], index)
+ $ image = io.imread(row[0])
+
+$  boxes, scores, labels = predict(image)
+
+ $ draw = image.copy()
+ $ draw_detections(draw, boxes, scores, labels)
+
+ $ plt.axis('off')
+ $ plt.imshow(draw)
+ $ plt.show()
+ ```
+ - SI TODO SALE BIEN SE  VERA DE LA SIGUIENTE MANERA:
+ [![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/prueba.jpeg)]
+ 
+   
+   
 
 
 
