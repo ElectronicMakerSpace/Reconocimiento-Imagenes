@@ -130,7 +130,7 @@ drive.mount('/content/drive')
 # IMPORTANTE
 DEBES CARGAR LOS ARCHIVOS CSV Y LAS IMAGENES ETIQUETADAS EN GOOGLE DRIVE PARA PODER REALIZAR ESTE PROCESO
 # CONTINUAMOS:
-- Al montar nuestro drive escrivimos las siguientes lineas de codigo para  copiar los archivos de entrenamiento que necesitamos
+- Al montar nuestro drive escribimos las siguientes lineas de codigo para  copiar los archivos de entrenamiento que necesitamos
 
 ```sh 
 $ # Copiamos los archivos que necesitamos para el entrenamiento
