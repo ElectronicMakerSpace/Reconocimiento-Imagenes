@@ -103,9 +103,24 @@ $ with open('classes.csv', 'w') as f:
 
 [![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/gpu.jpeg)]
 
+ 
+ ```sh 
+#Como primer paso clonamos el repositorio de keras-retinanet
+$!git clone https://github.com/DavidReveloLuna/keras-retinanet.git
+ $ # instalamos los siguientes paquetes
+$!pip install keras==2.3.1
+$ !pip install tensorflow==2.1
+# Nos dirigimos a la siguiente carpeta
+cd keras-retinanet/
+# Instalación y configuración de keras-retinet
+!pip install .
+!python setup.py build_ext --inplace
 
-
-
+# Montar tu drive
+from google.colab import drive
+drive.mount('/content/drive')
+```
+ 
 
 
 
