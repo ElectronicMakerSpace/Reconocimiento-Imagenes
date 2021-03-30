@@ -14,6 +14,7 @@ git clone https://github.com/tzutalin/labelImg.git
  
  Este programa creara un archivo XML donde se encuentran las coordenadas del objeto a detectar y el nombre de la clase
   [![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/label2.jpeg)]
+  # Archivos XML a archivos CSV
  - Terminando de  etiquetar todas las imagenes  convertiremos los archivos  XML a  archivos CSV  apoyandonos de jupyter notebook.
  ```sh
  # importamoslibrerias
@@ -174,8 +175,11 @@ urllib.request.urlretrieve(URL_MODEL, './snapshots/model.h5')
 ```sh 
 !chmod 777 keras_retinanet/bin/*
 ```
-
-
+# Se realiza el entrenamiento
+```sh 
+!keras_retinanet/bin/train.py --freeze-backbone --random-transform --weights snapshots/model.h5 --batch-size 8 --steps 200 --epochs 50 csv annotations.csv classes.csv
+#!keras_retinanet/bin/train.py --freeze-backbone --random-transform --weights snapshots/resnet50_csv_21.h5 --batch-size 8 --steps 500 --epochs 50 csv annotations.csv classes.csv
+```
 
 
 
