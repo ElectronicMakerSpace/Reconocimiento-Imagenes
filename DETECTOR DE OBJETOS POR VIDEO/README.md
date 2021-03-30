@@ -169,6 +169,7 @@ $ from keras_retinanet.utils.colors import label_color
 ```sh 
 URL_MODEL = 'https://github.com/fizyr/keras-retinanet/releases/download/0.5.1/resnet50_coco_best_v2.1.0.h5'
 urllib.request.urlretrieve(URL_MODEL, './snapshots/model.h5')
+# este modelo se grabara en la carpeta snapshots
 ```
 
 # Es importante correr la siguiente linea de codigo, si no no se llevara acabo  el entrenamiento.
@@ -176,10 +177,16 @@ urllib.request.urlretrieve(URL_MODEL, './snapshots/model.h5')
 !chmod 777 keras_retinanet/bin/*
 ```
 # Se realiza el entrenamiento
+
 ```sh 
 !keras_retinanet/bin/train.py --freeze-backbone --random-transform --weights snapshots/model.h5 --batch-size 8 --steps 200 --epochs 50 csv annotations.csv classes.csv
-#!keras_retinanet/bin/train.py --freeze-backbone --random-transform --weights snapshots/resnet50_csv_21.h5 --batch-size 8 --steps 500 --epochs 50 csv annotations.csv classes.csv
+#Aqui se realizara el entrenamiento , aqui especificamoe el numero de epocas , batch y eteps.
+#Cabe mencionar que este puede tardar horas  o dias dependiendo   del nuemero de batch-size,steps,epochs y el internet ,Tambien cabe mencionar que debes cuidar este  proceso para que no haya sobre entrenamiento.
 ```
+- A si se veria el entrenamiento de la ultima epoca
+[![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/E.jpeg)]
+
+
 
 
 
