@@ -23,7 +23,7 @@
 # CONVERTIR ARCHIVO .ui EN ARCHIVO .py
 - Para esto escribe en el cmd, el siguiente código:
 - pyuic5 nombre del arcvivo.ui -o nombre del archivo.py
--Teniendo  la conversió pasaremos al codigo
+- Teniendo  la conversió pasaremos al codigo
 # CÓDIGO
  ```sh
  # IMPORTAMOS LIBRERIAS 
