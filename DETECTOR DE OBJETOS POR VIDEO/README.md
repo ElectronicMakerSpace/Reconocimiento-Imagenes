@@ -1,4 +1,4 @@
-# Detección de objetos en video usando el modelo Retinanet
+# Detección DE OBJETOS EN VIDEO USANDO EL MODELO Retinanet
 
 - COMO PRIMER PASO
 # DESCARGAMOS  labelImg
@@ -132,7 +132,7 @@ drive.mount('/content/drive')
 # IMPORTANTE
 DEBES CARGAR LOS ARCHIVOS CSV Y LAS IMAGENES ETIQUETADAS EN GOOGLE DRIVE PARA PODER REALIZAR ESTE PROCESO
 # CONTINUAMOS:
-- Al montar nuestro drive escribimos las siguientes lineas de codigo para  copiar los archivos de entrenamiento que necesitamos
+- Al montar nuestro drive escribimos las siguientes lineas de código para  copiar los archivos de entrenamiento que necesitamos
 
 ```sh 
 $ # Copiamos los archivos que necesitamos para el entrenamiento
@@ -142,7 +142,7 @@ $ !cp -r "/content/drive/My Drive/prueba5/annotations.csv" "/content/keras-retin
 $ !cp -r "/content/drive/My Drive/prueba5/annotations_test.csv" "/content/keras-retinanet"
 $ !cp -r "/content/drive/My Drive/prueba5/classes.csv" "/content/keras-retinanet" 
 ```
-#Teniendo  los archivos procedemos  con el codigo
+#TENIENDO  LOS ARCHIVOS PROCEDEMOS CON EL CÓDIGO  
 ```sh 
 # importamos librerias
 $ import numpy as np
@@ -166,7 +166,7 @@ $ from keras_retinanet.utils.image import read_image_bgr, preprocess_image, resi
 $ from keras_retinanet.utils.visualization import draw_box, draw_caption
 $ from keras_retinanet.utils.colors import label_color
 ```
-# Descargamos modelo preentrenado resnet50_coco
+# DESCARGAMOS MODELO PREENTRENADO resnet50_coco
 ```sh 
 URL_MODEL = 'https://github.com/fizyr/keras-retinanet/releases/download/0.5.1/resnet50_coco_best_v2.1.0.h5'
 urllib.request.urlretrieve(URL_MODEL, './snapshots/model.h5')
@@ -177,7 +177,7 @@ urllib.request.urlretrieve(URL_MODEL, './snapshots/model.h5')
 ```sh 
 !chmod 777 keras_retinanet/bin/*
 ```
-# Se realiza el entrenamiento
+# SE REALIZA EL ENTRENAMIENTO 
 
 ```sh 
 !keras_retinanet/bin/train.py --freeze-backbone --random-transform --weights snapshots/model.h5 --batch-size 8 --steps 200 --epochs 50 csv annotations.csv classes.csv
