@@ -10,7 +10,7 @@ git clone https://github.com/tzutalin/labelImg.git
 - POSTADA: Para realizar un mejor entrenamiento se recomienda  tener 1500 imagenes como minimo  de cada clase a detectar.
 - Despues de tener nuestras imagenes procedemos a etiquetarlas con labelImg
  
- [![N|Solid](https://github.com/KARENalejand/DETECTOR-DE-OBJETOS/blob/main/labels.jpeg)]
+ [![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/labels.jpeg)]
  
  Este programa creara un archivo XML donde se encuentran las coordenadas del objeto a detectar y el nombre de la clase
   [![N|Solid](https://github.com/KARENalejand/DETECTOR-DE-OBJETOS/blob/main/label2.jpeg)]
