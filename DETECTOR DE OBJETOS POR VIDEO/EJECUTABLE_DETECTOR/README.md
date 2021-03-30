@@ -171,6 +171,13 @@ $    window = MyApp()
 $    window.show()
 $    sys.exit(app.exec_())
 ```
+# CREAR ARCHIVO .EXE CON  auto-py-to-exe
+- Escribimos en el cmd "auto-py-to-exe" este abrira la siguiente ventana:
+[![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/PT-TO-EXE.jpeg)]
+- Cargamos  nuestro código principal donde se hace la deteción de objetos
+ [![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/CARGAR.jpeg)]
+ 
+
     
         
 
