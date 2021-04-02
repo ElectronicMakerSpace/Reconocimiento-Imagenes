@@ -117,7 +117,7 @@ $    sys.exit(app.exec_())
 
 [![N|Solid](https://github.com/ElectronicMakerSpace/Reconocimiento-Imagenes/blob/main/DETECTOR%20DE%20OBJETOS%20POR%20VIDEO/im%C3%A1genes%20para%20%20readme/RESULTADO7.jpeg)]
 
-- Checar el funcionamiento del app en  el siguiente link: https://youtu.be/5GuRWsVrODI
+- Checar el funcionamiento del app en  el siguiente link: https://youtu.be/3nSfKc8m6CM
 
 
 
